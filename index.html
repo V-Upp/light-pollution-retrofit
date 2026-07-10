@@ -3,79 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadway Light Pollution Retrofit</title>
+    <title>Cobra-Head Retrofit: Engineering Notebook</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">Eco-Retrofit Project</div>
+            <div class="logo">Cobra-Head Retrofit Investigation</div>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="design.html">Design</a></li>
+                <li><a href="project.html">Project</a></li>
                 <li><a href="research.html">Research</a></li>
+                <li><a href="design.html">Design</a></li>
                 <li><a href="progress.html">Progress</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Optimizing Our Night Skies</h1>
-            <p>Investigating low-cost, scalable retrofits to mitigate urban light pollution from existing cobra-head streetlights.</p>
+        <section class="hero-investigation">
+            <h1>Engineering Investigation Notebook</h1>
+            <p class="mission-statement">
+                We are two high school students in North Texas investigating whether a removable retrofit for existing cobra-head streetlights can reduce glare and light pollution without replacing the fixture.
+            </p>
         </section>
 
-        <section class="about-section">
-            <h2>About Us</h2>
-            <p>We are two high school students in North Texas interested in engineering and environmental sustainability. This project began after noticing unnecessary light spill from roadway lighting in our community. Our goal is to learn from engineers while investigating whether an inexpensive retrofit could reduce unwanted light without replacing existing infrastructure.</p>
-        </section>
-
-        <div class="project-grid">
+        <div class="homepage-grid">
             
-            <div class="status-card">
-                <h2>Project Status <span class="date-tag">(July 2026)</span></h2>
-                <ul class="checklist">
-                    <li class="completed"><span class="icon">✓</span> Problem definition</li>
-                    <li class="completed"><span class="icon">✓</span> Initial CAD concept</li>
-                    <li class="completed"><span class="icon">✓</span> One-page proposal</li>
-                    <li class="completed"><span class="icon">✓</span> Public project website</li>
+            <div class="dashboard-card">
+                <h3>Current Status</h3>
+                <ul class="notebook-list check-list">
+                    <li>CAD concept complete</li>
+                    <li>Initial engineering proposal</li>
+                    <li>Public documentation live</li>
                 </ul>
-                
-                <h3 class="sub-heading">Current work:</h3>
-                <ul class="checklist">
-                    <li class="pending"><span class="icon">□</span> Refine CAD</li>
-                    <li class="pending"><span class="icon">□</span> Wind load calculations</li>
-                    <li class="pending"><span class="icon">□</span> Photometric simulation</li>
-                    <li class="pending"><span class="icon">□</span> Thermal analysis</li>
-                    <li class="pending"><span class="icon">□</span> Prototype fabrication</li>
-                </ul>
-                <p class="status-note">We're currently looking for technical feedback from engineers and researchers before moving to prototyping.</p>
             </div>
 
-            <div class="questions-card">
-                <h2>Open Engineering Questions</h2>
-                <p class="intro-text">We are actively investigating the following technical challenges:</p>
-                <ul class="questions-list">
-                    <li>How much would roadway illuminance change?</li>
-                    <li>How much glare reduction is achievable?</li>
-                    <li>Does the hood significantly affect cooling?</li>
-                    <li>Is the added projected area acceptable under wind loading?</li>
-                    <li>Would maintenance crews consider the retrofit practical?</li>
+            <div class="dashboard-card">
+                <h3>Currently Investigating</h3>
+                <ul class="notebook-list bullet-list">
+                    <li>Wind loading & drag profiles</li>
+                    <li>Thermal dissipation & LED lifespans</li>
+                    <li>Photometric light distribution tracking</li>
+                    <li>Low-cost manufacturing options</li>
+                </ul>
+            </div>
+
+            <div class="dashboard-card highlight-card">
+                <h3>Looking For</h3>
+                <ul class="notebook-list target-list">
+                    <li>Technical feedback from engineers</li>
+                    <li>Academic research papers & datasets</li>
+                    <li>Relevant municipal & DOT standards</li>
+                    <li>Professional industry mentors</li>
                 </ul>
             </div>
 
         </div>
 
-        <div class="disclaimer-box">
-            <p><strong>Disclaimer:</strong> This is an early-stage engineering concept intended for discussion and technical review. It has not been validated through structural, thermal, or photometric testing.</p>
-        </div>
+        <section class="matrix-section">
+            <h2>Engineering Maturity Matrix</h2>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Engineering Area</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CAD Modeling</td>
+                        <td><span class="status-tag status-green">✅ Complete (Rough)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Structural Analysis</td>
+                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
+                    </tr>
+                    <tr>
+                        <td>Thermal Analysis</td>
+                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
+                    </tr>
+                    <tr>
+                        <td>Photometric Simulation</td>
+                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
+                    </tr>
+                    <tr>
+                        <td>Physical Prototype</td>
+                        <td><span class="status-tag status-gray">⬜ Not Started</span></td>
+                    </tr>
+                    <tr>
+                        <td>Field Testing</td>
+                        <td><span class="status-tag status-gray">⬜ Not Started</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="criteria-box">
+            <h2>Falsification & Abandonment Criteria</h2>
+            <p>To maintain objective scientific integrity, we have established clear thresholds that would require a complete redesign or outright cancellation of this concept:</p>
+            <ul>
+                <li><strong>Illuminance Drop:</strong> If simulations show roadway target-area illumination decreases below safety margins, we will abandon the geometry.</li>
+                <li><strong>Thermal Trapping:</strong> If thermal modeling indicates heat buildup shortens the existing LED lifespan, we will discard the current enclosure design.</li>
+                <li><strong>Wind Shear:</strong> If the added surface area creates wind loading that exceeds standard TxDOT utility pole limits, the concept will be deemed unviable.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Light Pollution Retrofit Project | North Texas</p>
+        <p>&copy; 2026 Engineering Investigation Log | North Texas</p>
     </footer>
 
 </body>
