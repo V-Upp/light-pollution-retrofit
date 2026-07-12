@@ -67,7 +67,9 @@ main {
 .hero-investigation h1 {
     font-size: 2rem;
     color: #f0f6fc;
-    margin-bottom: 1rem;
+    border-left: 4px solid #58a6ff;
+    padding-left: 1rem
+    margin-bottom: 3rem;
 }
 
 .mission-statement {
