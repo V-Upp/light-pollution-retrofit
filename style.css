@@ -67,16 +67,18 @@ main {
 .hero-investigation h1 {
     font-size: 2rem;
     color: #f0f6fc;
-    border-left: 4px solid #58a6ff;
-    padding-left: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .mission-statement {
-    font-size: 1.15rem;
-    color: #f0f6fc;
-    border-left: 4px solid #58a6ff;
-    padding-left: 1rem;
+    background-color: #161b22; /* The dark grey box background */
+    border-left: 4px solid #388bfd; /* The blue accent line */
+    padding: 1.25rem; /* Padding inside the box so text has breathing room */
+    border-radius: 0 6px 6px 0; /* Slightly rounded corners on the right side */
+    color: #c9d1d9; /* Clean text color */
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
