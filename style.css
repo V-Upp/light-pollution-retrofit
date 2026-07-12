@@ -1,23 +1,23 @@
 /* --------------------------------------------------------------------------
-   1. DESIGN SYSTEM & VARIABLE DECLARATIONS
+   1. ARCHITECTURAL LIGHT MODE SYSTEM VARIABLES
    -------------------------------------------------------------------------- */
 :root {
-    /* Color Palette: Deep Space Void & Monochromatic Zinc with High-Fi Accents */
-    --bg-void: #05070f;          /* Absolute dark velvet sky */
-    --surface-base: #0c0f19;     /* Deep technical panel */
-    --surface-elevated: #131826; /* Highlighted panel layer */
+    /* Color Palette: Editorial Lab Notebook (Crisp Whites, Technical Grays, Blueprint Blues) */
+    --bg-void: #f8fafc;          /* Off-white canvas background */
+    --surface-base: #ffffff;     /* Pure white premium paper panel */
+    --surface-elevated: #f1f5f9; /* Subtle technical grouping panel */
     
-    --border-subtle: #1e2538;    /* Precision mechanical line */
-    --border-accent: #38bdf8;    /* Photometric beam blue */
-    --border-critical: #ef4444;  /* Falsification criteria red */
+    --border-subtle: #e2e8f0;    /* Precision graph-paper line */
+    --border-accent: #0969da;    /* Blueprint engineering blue */
+    --border-critical: #cf222e;  /* Falsification criteria industrial red */
 
-    --text-primary: #f8fafc;     /* High-contrast crisp white */
-    --text-muted: #94a3b8;       /* Technical data grey */
-    --text-accent: #38bdf8;      /* Skyglow mitigation blue */
+    --text-primary: #0f172a;     /* Deep slate ink for maximum readability */
+    --text-muted: #57606a;       /* Clean technical metadata gray */
+    --text-accent: #0969da;      /* Structural focus blue */
 
-    /* Fluid Typography using clamp() - Scale perfectly from mobile to 4K */
+    /* Fluid Typography using clamp() */
     --font-size-h1: clamp(1.85rem, 4vw, 2.75rem);
-    --font-size-h2: clamp(1.4rem, 2.5vw, 1.85rem);
+    --font-size-h2: clamp(1.35rem, 2.5vw, 1.75rem);
     --font-size-body: clamp(0.95rem, 1vw + 0.5rem, 1.05rem);
     --font-size-mono: clamp(0.8rem, 0.85vw + 0.2rem, 0.9rem);
 
@@ -27,7 +27,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. GLOBAL RESET & BASE STYLES
+   2. GLOBAL DOCUMENT LAYOUT (COLLISION FIX)
    -------------------------------------------------------------------------- */
 * {
     margin: 0;
@@ -42,8 +42,8 @@ body {
     font-size: var(--font-size-body);
     line-height: 1.6;
     letter-spacing: -0.01em;
-    padding-top: 80px; /* Account for fixed navigation */
     -webkit-font-smoothing: antialiased;
+    /* REMOVED hardcoded padding-top that caused the collision bug */
 }
 
 code, pre, table, .mono {
@@ -52,14 +52,16 @@ code, pre, table, .mono {
 }
 
 /* --------------------------------------------------------------------------
-   3. SEMANTIC LANDMARK: NAVIGATION ARCHITECTURE
+   3. STICKY NAVIGATION HEADER (PREVENTS OVERLAPPING)
    -------------------------------------------------------------------------- */
 header {
-    background-color: rgba(5, 7, 15, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-subtle);
-    position: fixed;
+    
+    /* FIX: Changed from fixed to sticky. It now natively reserves layout space */
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -102,6 +104,8 @@ nav ul li a {
 
 nav ul li a:hover, nav ul li a.active {
     color: var(--text-accent);
+    border-bottom: 2px solid var(--border-accent);
+    padding-bottom: 4px;
 }
 
 /* --------------------------------------------------------------------------
@@ -113,9 +117,8 @@ main {
     padding: 3rem 2rem;
 }
 
-/* Hero Asymmetry */
 .hero-investigation {
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
     max-width: 850px;
 }
 
@@ -125,16 +128,15 @@ main {
     line-height: 1.15;
     letter-spacing: -0.04em;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .mission-statement {
-    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     color: var(--text-muted);
     line-height: 1.5;
 }
 
-/* Advanced CSS Grid Layout (Editorial / Asymmetric) */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -142,36 +144,34 @@ main {
     margin-bottom: 2.5rem;
 }
 
-/* Custom Module Spans */
 .col-8 { grid-column: span 8; }
 .col-4 { grid-column: span 4; }
-.col-7 { grid-column: span 7; }
-.col-5 { grid-column: span 5; }
 .col-12 { grid-column: span 12; }
 
-/* Structural Component Cards */
+/* Structural Cards with Soft Layered Real-World Shadows */
 article, section.card {
     background-color: var(--surface-base);
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 2.25rem;
+    /* Soft, multi-layered micro-shadows for a clean paper aesthetic */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 
+                0 4px 12px rgba(0, 0, 0, 0.03);
     transition: border-color var(--transition-speed) var(--easing-standard), 
                 box-shadow var(--transition-speed) var(--easing-standard);
 }
 
-/* Subtle, realistic layered shadows on micro-interaction */
 article:hover, section.card:hover {
-    border-color: rgba(56, 189, 248, 0.3);
-    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.1), 
-                0 10px 30px -10px rgba(0, 0, 0, 0.7);
+    border-color: rgba(9, 105, 218, 0.4);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 
+                0 12px 24px -10px rgba(0, 0, 0, 0.08);
 }
 
 .highlight-card {
-    border-color: rgba(56, 189, 248, 0.4);
-    background: linear-gradient(135deg, var(--surface-base) 0%, #0d1624 100%);
+    border-color: rgba(9, 105, 218, 0.3);
+    background: linear-gradient(135deg, var(--surface-base) 0%, #f4f8ff 100%);
 }
 
-/* Typography Inside Layout Modules */
 h2.module-title, h3.module-title {
     font-size: var(--font-size-h2);
     font-weight: 700;
@@ -181,7 +181,7 @@ h2.module-title, h3.module-title {
 }
 
 /* --------------------------------------------------------------------------
-   5. HIGH-DENSITY TECHNICAL COMPONENTS (Tables & Logs)
+   5. DATA LEDGERS & METRICS (TABLES & LISTS)
    -------------------------------------------------------------------------- */
 .matrix-table {
     width: 100%;
@@ -191,113 +191,4 @@ h2.module-title, h3.module-title {
 }
 
 .matrix-table th {
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border-subtle);
-}
-
-.matrix-table td {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(30, 37, 56, 0.5);
-    color: var(--text-primary);
-}
-
-/* Status Indicator Micro-badges */
-.status-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.badge-complete { color: #4ade80; }
-.badge-active { color: #f59e0b; }
-.badge-pending { color: var(--text-muted); }
-
-/* Technical Unordered Lists */
-.spec-list {
-    list-style: none;
-}
-
-.spec-list li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.85rem;
-    color: var(--text-muted);
-}
-
-.spec-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--text-accent);
-    font-weight: bold;
-}
-
-/* --------------------------------------------------------------------------
-   6. RISK MANAGEMENT: FALSIFICATION CRITERIA
-   -------------------------------------------------------------------------- */
-.falsification-card {
-    border-left: 4px solid var(--border-critical) !important;
-    background: linear-gradient(90deg, #160b0b 0%, var(--surface-base) 100%);
-}
-
-.falsification-card h2 {
-    color: #f87171;
-}
-
-.criteria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.criteria-item strong {
-    display: block;
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
-}
-
-.criteria-item p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-/* --------------------------------------------------------------------------
-   7. RESPONSIVE BREAKPOINTS (CSS GRID OVERRIDES)
-   -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
-    .col-8, .col-7, .col-5, .col-4 {
-        grid-column: span 6;
-    }
-}
-
-@media (max-width: 768px) {
-    .bento-grid {
-        display: flex;
-        flex-direction: column;
-    }
-    .criteria-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-footer {
-    text-align: center;
-    padding: 3rem 2rem;
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    border-top: 1px solid var(--border-subtle);
-    margin-top: 5rem;
-}
+    color
