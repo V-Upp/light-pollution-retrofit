@@ -10,7 +10,7 @@
 
     <header>
         <nav>
-            <div class="logo">Cobra-Head Retrofit Investigation</div>
+            <div class="logo">Cobra-Head <span>Retrofit Investigation</span></div>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="project.html">Project</a></li>
@@ -24,97 +24,107 @@
     </header>
 
     <main>
-        <section class="hero-investigation">
-            <h1>Engineering Investigation Notebook</h1>
+        
+        <header class="hero-investigation">
+            <h1>Engineering Investigation Log</h1>
             <p class="mission-statement">
                 We are two high school students in North Texas investigating whether a removable retrofit for existing cobra-head streetlights can reduce glare and light pollution without replacing the fixture.
             </p>
-        </section>
+        </header>
 
-        <div class="homepage-grid">
+        <div class="bento-grid">
             
-            <div class="dashboard-card">
-                <h3>Current Status</h3>
-                <ul class="notebook-list check-list">
-                    <li>CAD concept complete</li>
-                    <li>Initial engineering proposal</li>
-                    <li>Public documentation live</li>
-                </ul>
-            </div>
+            <article class="col-8">
+                <h2 class="module-title">Current Phase Metrics</h2>
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Investigation Module</th>
+                            <th>Verification Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Problem Definition & Baseline Metrics</td>
+                            <td><span class="status-badge badge-complete">✓ Complete</span></td>
+                        </tr>
+                        <tr>
+                            <td>Initial CAD Concept Generation</td>
+                            <td><span class="status-badge badge-complete">✓ Complete</span></td>
+                        </tr>
+                        <tr>
+                            <td>Public Engineering Notebook Deployment</td>
+                            <td><span class="status-badge badge-complete">✓ Complete</span></td>
+                        </tr>
+                        <tr>
+                            <td>Aerodynamic & Wind Load Computations</td>
+                            <td><span class="status-badge badge-active">🟡 Active Tracking</span></td>
+                        </tr>
+                        <tr>
+                            <td>Enclosure Thermal Dissipation Simulation</td>
+                            <td><span class="status-badge badge-pending">⬜ Pending Pipeline</span></td>
+                        </tr>
+                        <tr>
+                            <td>Photometric Ray Tracing (Spill Light Analysis)</td>
+                            <td><span class="status-badge badge-pending">⬜ Pending Pipeline</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
 
-            <div class="dashboard-card">
-                <h3>Currently Investigating</h3>
-                <ul class="notebook-list bullet-list">
-                    <li>Wind loading & drag profiles</li>
-                    <li>Thermal dissipation & LED lifespans</li>
-                    <li>Photometric light distribution tracking</li>
-                    <li>Low-cost manufacturing options</li>
+            <section class="card col-4 highlight-card">
+                <h3 class="module-title">Active Domain Inquiries</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                    We are actively seeking collaborative guidance and domain criticism from academic and industry practitioners in the following areas:
+                </p>
+                <ul class="spec-list">
+                    <li>Civil engineering wind-shear tolerances</li>
+                    <li>LED thermal management papers</li>
+                    <li>IESNA lighting design standards</li>
+                    <li>DIALux simulation model reviews</li>
                 </ul>
-            </div>
+            </section>
 
-            <div class="dashboard-card highlight-card">
-                <h3>Looking For</h3>
-                <ul class="notebook-list target-list">
-                    <li>Technical feedback from engineers</li>
-                    <li>Academic research papers & datasets</li>
-                    <li>Relevant municipal & DOT standards</li>
-                    <li>Professional industry mentors</li>
-                </ul>
-            </div>
+            <article class="col-12">
+                <h2 class="module-title">Primary Open Technical Questions</h2>
+                <div class="criteria-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="criteria-item" style="border-left: 2px solid var(--border-accent); padding-left: 1rem;">
+                        <strong>Optical Performance:</strong>
+                        <p>What is the exact percentage shift in roadway target-area illuminance when adding peripheral shielding profiles?</p>
+                    </div>
+                    <div class="criteria-item" style="border-left: 2px solid var(--border-accent); padding-left: 1rem;">
+                        <strong>Thermal Integrity:</strong>
+                        <p>Does enclosing the upper casting flange cause local heat entrapment that speeds up driver or diode degradation?</p>
+                    </div>
+                </div>
+            </article>
+
+            <section class="card col-12 falsification-card">
+                <h2 class="module-title">Falsification & Core Abandonment Thresholds</h2>
+                <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--text-muted);">
+                    To verify this inquiry adheres to objective engineering methods rather than commercial confirmation bias, development will immediately halt or pivot if any of the following metrics are met:
+                </p>
+                <div class="criteria-grid">
+                    <div class="criteria-item">
+                        <strong>[01] Photometric Drop</strong>
+                        <p>If ray-tracing models verify that downward pavement illuminance dips below standard municipal traffic safety margins.</p>
+                    </div>
+                    <div class="criteria-item">
+                        <strong>[02] Thermal Spikes</strong>
+                        <p>If steady-state thermal analysis yields operating junction temperatures that cause premature LED output degradation.</p>
+                    </div>
+                    <div class="criteria-item">
+                        <strong>[03] Wind Shear Bounds</strong>
+                        <p>If the calculated wind drag coefficient of the shield exceeds structural tolerances allowed for standard utility mast arms.</p>
+                    </div>
+                </div>
+            </section>
 
         </div>
-
-        <section class="matrix-section">
-            <h2>Engineering Maturity Matrix</h2>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th>Engineering Area</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CAD Modeling</td>
-                        <td><span class="status-tag status-green">✅ Complete (Rough)</span></td>
-                    </tr>
-                    <tr>
-                        <td>Structural Analysis</td>
-                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Thermal Analysis</td>
-                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Photometric Simulation</td>
-                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Physical Prototype</td>
-                        <td><span class="status-tag status-gray">⬜ Not Started</span></td>
-                    </tr>
-                    <tr>
-                        <td>Field Testing</td>
-                        <td><span class="status-tag status-gray">⬜ Not Started</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="criteria-box">
-            <h2>Falsification & Abandonment Criteria</h2>
-            <p>To maintain objective scientific integrity, we have established clear thresholds that would require a complete redesign or outright cancellation of this concept:</p>
-            <ul>
-                <li><strong>Illuminance Drop:</strong> If simulations show roadway target-area illumination decreases below safety margins, we will abandon the geometry.</li>
-                <li><strong>Thermal Trapping:</strong> If thermal modeling indicates heat buildup shortens the existing LED lifespan, we will discard the current enclosure design.</li>
-                <li><strong>Wind Shear:</strong> If the added surface area creates wind loading that exceeds standard TxDOT utility pole limits, the concept will be deemed unviable.</li>
-            </ul>
-        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Engineering Investigation Log | North Texas</p>
+        <p>&copy; 2026 Open Source Engineering Notebook | Project Cobra-Head Retrofit</p>
     </footer>
 
 </body>
