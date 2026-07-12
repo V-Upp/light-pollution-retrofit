@@ -322,3 +322,129 @@ code, pre, table, .mono, .contact-links strong {
         height: 120px;
     }
 }
+/* --- Design & Progress Page Specific Layout Layouts --- */
+
+.design-visuals {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.visual-card {
+    flex: 1;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.visual-card h3 {
+    color: #f0f6fc;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.design-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual-caption {
+    font-size: 0.85rem;
+    color: #8b949e;
+    margin-top: 0.75rem;
+    line-height: 1.4;
+}
+
+/* Feature Breakdown Cards */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 1.25rem;
+}
+
+.feature-item h4 {
+    color: #58a6ff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #c9d1d9;
+    line-height: 1.5;
+}
+
+/* Timeline Progression Styles */
+.log-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.log-entry {
+    display: flex;
+    gap: 2rem;
+    border-left: 2px solid #30363d;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.log-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #58a6ff;
+    font-weight: 500;
+    min-width: 120px;
+    flex-shrink: 0;
+    padding-top: 0.2rem;
+}
+
+.log-content h3 {
+    color: #f0f6fc;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.log-content p {
+    font-size: 0.95rem;
+    color: #c9d1d9;
+}
+
+/* Mobile Responsiveness for Design & Logs */
+@media (max-width: 768px) {
+    .design-visuals {
+        flex-direction: column;
+    }
+    .log-entry {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-left: 1rem;
+    }
+    .log-date {
+        min-width: auto;
+    }
+}
