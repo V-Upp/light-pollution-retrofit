@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobra-Head Retrofit: Engineering Notebook</title>
+    <title>CAD Design & Specifications | Cobra-Head Retrofit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,10 +15,10 @@
         <nav>
             <div class="logo">Cobra-Head Retrofit Investigation</div>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="project.html">Project</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="design.html">Design</a></li>
+                <li><a href="design.html" class="active">Design</a></li>
                 <li><a href="progress.html">Progress</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -24,92 +27,64 @@
     </header>
 
     <main>
-        <section class="hero-investigation">
-            <h1>Engineering Investigation Notebook</h1>
-            <p class="mission-statement">
-                We are two students in North Texas investigating whether a removable retrofit for existing cobra-head streetlights can reduce glare and light pollution without replacing the fixture.
+        <section class="contact-hero">
+            <h1>CAD Model & Engineering Mechanics</h1>
+            <p class="criticism-statement">
+                <strong>Current Document Assembly:</strong> Features are structurally isolated as independent solid bodies in the STEP assembly for independent simulation.
             </p>
         </section>
 
-        <div class="homepage-grid">
-            
-            <div class="dashboard-card">
-                <h3>Current Status</h3>
-                <ul class="notebook-list check-list">
-                    <li>CAD concept complete</li>
-                    <li>Initial engineering proposal</li>
-                    <li>Public documentation live</li>
-                </ul>
+        <div class="design-visuals widescreen-layout">
+            <div class="visual-card full-width-card">
+                <div class="card-header-link">
+                    <a href="Cobra Head Retrofit Hood v1.0" class="pdf-document-link" target="_blank" download>
+                        27" COBRA-HEAD FIXTURE RETROFIT HOOD: Dimensioned Engineering Drawing + Parametric 3D CAD Model (PDF)
+                    </a>
+                </div>
+                
+                <div class="design-image-container massive-viewport">
+                    <img src="cad-render.png" alt="Cobra-Head Retrofit Hood v1.0 CAD Isometric View" class="display-photo" onerror="this.parentNode.querySelector('.photo-placeholder').style.display='flex'; this.style.display='none';">
+                    <div class="photo-placeholder"><span>[ Space for Isometric (ISO) View of CAD Model ]</span></div>
+                </div>
+                <p class="visual-caption">Figure 1.0: Isometric (ISO) CAD assembly tracking external shell shielding geometry, ventilation cutouts, and physical bracket attachments.</p>
             </div>
-
-            <div class="dashboard-card">
-                <h3>Currently Investigating</h3>
-                <ul class="notebook-list bullet-list">
-                    <li>Wind loading & drag profiles</li>
-                    <li>Thermal dissipation & LED lifespans</li>
-                    <li>Photometric light distribution tracking</li>
-                    <li>Low-cost manufacturing options</li>
-                </ul>
-            </div>
-
-            <div class="dashboard-card highlight-card">
-                <h3>Looking For</h3>
-                <ul class="notebook-list target-list">
-                    <li>Technical feedback from engineers</li>
-                    <li>Academic research papers & datasets</li>
-                    <li>Relevant municipal & DOT standards</li>
-                    <li>Professional industry mentors</li>
-                </ul>
-            </div>
-
         </div>
 
-        <section class="matrix-section">
-            <h2>Current Progress</h2>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th>Engineering Area</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CAD Modeling</td>
-                        <td><span class="status-tag status-green">✅ Complete (Rough)</span></td>
-                    </tr>
-                    <tr>
-                        <td>Structural Analysis</td>
-                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Thermal Analysis</td>
-                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Photometric Simulation</td>
-                        <td><span class="status-tag status-yellow">🟡 Planned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Physical Prototype</td>
-                        <td><span class="status-tag status-gray">⬜ Not Started</span></td>
-                    </tr>
-                    <tr>
-                        <td>Field Testing</td>
-                        <td><span class="status-tag status-gray">⬜ Not Started</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <section class="technical-specs" style="margin-top: 3rem;">
+            <h2>v1.0 Core Feature Breakdown</h2>
+            <div class="feature-list">
+                
+                <div class="feature-item">
+                    <h4>1. Side Overhang / Shielding Flares</h4>
+                    <p>Two thin angled plates are swept along the full length and unioned onto each side. These form the 13 mm shielding wings that extend past the fixture body to cut off lateral glare and light spill.</p>
+                </div>
 
-        <section class="criteria-box">
-            <h2>Falsification & Abandonment Criteria</h2>
-            <p>To maintain objective scientific integrity, we have established clear thresholds that would require a complete redesign or outright cancellation of this concept:</p>
-            <ul>
-                <li><strong>Illuminance Drop:</strong> If simulations show roadway target-area illumination decreases below safety margins, we will abandon the geometry.</li>
-                <li><strong>Thermal Trapping:</strong> If thermal modeling indicates heat buildup shortens the existing LED lifespan, we will discard the current enclosure design.</li>
-                <li><strong>Wind Shear:</strong> If the added surface area creates wind loading that exceeds standard TxDOT utility pole limits, the concept will be deemed unviable.</li>
-            </ul>
+                <div class="feature-item">
+                    <h4>2. Aerodynamic Ventilation Slots</h4>
+                    <p>Four slot-shaped cutouts measuring exactly 25 × 75 mm (two per side) are subtracted directly through the main shell. These reduce the overall wind loading profile without compromising structural rigidity.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>3. Photocell Opening & Raised Collar</h4>
+                    <p>A raised cylindrical collar is integrated onto the top surface with a concentric hole cut through its center. This configuration keeps the existing fixture's daytime photocell fully exposed and unhindered.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>4. Top Mounting Slots</h4>
+                    <p>Four precision-cut slots near the upper surface match standard utility fastener positions to allow modular attachment points.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>5. Rear Clamp Brackets</h4>
+                    <p>A separate hardware subsystem consisting of two L-shaped stainless steel plates with a specialized curved notch. Sized explicitly to grip a 1¼” to 2” OD tenon mounting arm.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h4>6. Removable Amber Filter Panel</h4>
+                    <p>A separate thin box insert measuring 610 × 178 × 3 mm positioned securely in the bottom opening. It is left non-fused to the main hood structure to allow easy removal for regular cleaning and maintenance.</p>
+                </div>
+
+            </div>
         </section>
     </main>
 
