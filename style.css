@@ -1874,3 +1874,23 @@ code, pre, table, .mono, .contact-links strong {
         width: 100%;
     }
 }
+/* CAD Gallery Viewport Sizing & Scaling */
+.cad-viewport {
+    height: 220px; /* Adjust this number to make preview boxes taller or shorter */
+    border-radius: 6px;
+    background-size: contain; /* 'contain' fits the ENTIRE CAD render inside without cropping */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cad-preview-card {
+    padding: 1rem;
+    text-align: center;
+}
+
+.cad-view-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #58a6ff;
+    margin-top: 0.75rem;
+}
